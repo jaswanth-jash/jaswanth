@@ -1,0 +1,70 @@
+
+               GitLAB WORKFLOW
+
+->THIS IS FOR BRANCHES
+
+ 
+-> The Gitflow Workflow defines a strict branching model designed around the project release. 
+   This provides a robust framework for managing larger projects.
+->It was first published and made popular by Vincent Driessen at nvie.
+->Gitflow is ideally suited for projects that have a scheduled release cycle.
+->This workflow doesn’t add any new concepts or commands beyond what’s required for the Feature Branch Workflow.
+
+***How it works
+ 1) MASTER 2)DEVELOP
+
+** Develop and Master Branches
+
+->Instead of a single master branch, this workflow uses two branches to record the history of the project.
+->The master branch stores the official release history, 
+  and the develop branch serves as an integration branch for features.   
+->The first step is to complement the default master with a develop branch.
+->A simple way to do this is for one developer to create an empty develop branch 
+    locally and push it to the server.
+
+  "git branch develop
+   git push -u origin develop"
+
+->When using the git-flow extension library, executing  git flow init 
+on an existing repo will create the develop branch.
+
+**Feature Branches
+
+->Each new feature should reside in its own branch, which can be pushed to the central repository for backup/collaboration.
+->But, instead of branching off of master, feature branches use develop as their parent branch. 
+->When a feature is complete, it gets merged back into develop. 
+->Features should never interact directly with master.
+ 
+  MASTER DEVELOP FEATURE  FEATURE
+
+->Note that feature branches combined with the develop branch is, 
+  for all intents and purposes, the Feature Branch Workflow.
+->But, the Gitflow Workflow doesn’t stop there.
+->Feature branches are generally created off to the latest develop branch.
+
+****Creating a feature branch****
+
+ **Without the git-flow extensions:
+
+      git checkout develop
+      git checkout -b feature_branch
+
+***When using the git-flow extension:
+
+      git flow feature start feature_branch
+
+->Continue your work and use Git like you normally would.
+
+***Finishing a feature branch
+
+->When you’re done with the development work on the feature, 
+the next step is to merge the feature_branch into develop.
+
+****Without the git-flow extensions:
+
+       "git checkout develop
+        git merge feature_branch"
+
+***Using the git-flow extensions:
+
+git flow feature finish feature_branch

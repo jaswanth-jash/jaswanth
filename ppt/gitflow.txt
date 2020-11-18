@@ -1,0 +1,75 @@
+      GITHUB WORKFLOW STEPS
+
+Step 1: Create a GitHub account
+
+-> The easiest way to get started is to create an account on GitHub.com (it's free).
+->username , enter your email address and a password, and click Sign up for GitHub.
+ Once you are in, and in right of the above screen
+
+Step 2: Create a new repository
+
+->A repository is like a place or a container where something is stored; 
+->In this case we're creating a Git repository to store code. 
+->To create a new repository, 
+                select New Repository  
+   1)Enter a name for your repository (e.g, "mylearningnodejs").
+   2)And u select private (it can see everyone)
+   3)and click Create Repository.
+
+ "THIS IS THE PROCESS TO CREATE REPO."
+"After created on repo one url it is show "eg https://github.com/jaswanth-jash/mylearningnodejs"
+
+Step 3: Create a file
+
+->firstly it is show branch and some 5 command.
+  1)Branch - Master
+  2)Commands;
+    ->git init
+    ->git status
+    ->git add (or) git add .
+    ->git commit -m ""
+    ->git push
+
+->Open the command prompt program on your computer.
+1) Type install Git and enter
+2)mkdir nodejs(created one folder)
+3)cd nodejs(we can go to that folder)
+4)we create 2 files in that Readme.md and .gitignore
+->readme.md means what concept we write in that folder that we write
+->gitignore means which file doesnt exits
+
+And we add all these then after -----
+
+Step 4: Make a commit
+
+->y we this comment means to write a which program u write in that file.
+Are else this is my first program can we write that y we use this comment.
+->
+
+
+Step 5: Connect your GitHub repo with your computer
+
+  "git remote add origin https://github.com/jaswanth-jash/mylearningnodejs"
+->We are telling Git to add a remote called origin with the address
+ https://github.com/jaswanth-jash/mylearningnodejs(i.e., the URL of your Git repo on GitHub.com).
+-> we have added the remote, we can push our code (i.e., upload our README.md file) to GitHub.com.
+
+finally it is show in repo file.
+
+                    DIAGRAM OVERVIEW
+  
+ WORKING             STAGING         LOCALREPO         REMOTE REPO 
+ DIRECTORY            AREA
+     
+           GIT ADD ->
+                             GIT COMMIT->
+                                              GIT PUSH->
+                       
+                                             <-GIT PULL
+              <-GIT CHECKOUT
+
+
+
+
+
+
